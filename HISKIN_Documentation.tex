@@ -1,0 +1,298 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{tabularx}
+\hbadness=99999
+\vbadness=99999
+\hfuzz=20pt
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+
+\title{HISKIN\\
+
+}
+
+\author{\IEEEauthorblockN{1\textsuperscript{st} CHAN MIN KIM}
+\IEEEauthorblockA{\textit{Dept. Information System} \\
+\textit{College of Engineering}\\
+\textit{Hanyang University}\\
+Seoul, Korea \\
+han2cmk@hanyang.ac.kr}
+\and
+\IEEEauthorblockN{2\textsuperscript{nd} SEOK YOUNG KIM}
+\IEEEauthorblockA{\textit{Dept. Information System} \\
+\textit{College of Engineering}\\
+\textit{Hanyang University}\\
+Seoul, Korea \\
+kim2653seok@gmail.com}
+\and
+\IEEEauthorblockN{3\textsuperscript{rd} HAE RYUNG CHA}
+\IEEEauthorblockA{\textit{Dept. Information System} \\
+\textit{College of Engineering}\\
+\textit{Hanyang University}\\
+Seoul, Korea \\
+haeryung8@hanyang.ac.kr}
+\and
+\IEEEauthorblockN{4\textsuperscript{th} YU JIN PARK}
+\IEEEauthorblockA{\textit{Dept. Information System} \\
+\textit{College of Engineering}\\
+\textit{Hanyang University}\\
+Seoul, Korea \\
+jinee22@hanyang.ac.kr}
+
+}
+
+\maketitle
+\thispagestyle{plain}
+\pagestyle{plain}
+
+\begin{abstract}
+
+Nowadays, with the increasing importance of skincare, a growing number of busy modern people are trying skincare at home by purchasing beauty devices instead of going to a dermatologist. For these customers, companies such as LG and FOREO are providing beauty devices and applications that can be linked to them. However, managing at home with a beauty device has several weaknesses in place of dermatology. First, there is a lack of communication. Many companies are trying to provide communication such as management methods, but it is still not enough to replace dermatology. The second is that it ends with care. Skin care requires care tailored to one's own skin type even after care, but there is a lack of action. To develop an application that can compensate for these weaknesses, our team is trying to develop a user-friendly application called HISKIN that can work with beauty devices for those who have difficulty taking care of their skin. It is managed by a beauty device registered by a user, and at the same time, it enables communication with users by using AI voice recognition technology. It provides communication functions on various topics such as skin care tips, daily conversations, and management methods according to the user's mood in addition to the existing function of providing guidance on how to use devices. Through these functions, we expect users can enjoy the same service as meeting a doctor in person. And also, through additional challenges program, users can take care of their skin not only at the moment they use the device, but also after care or normally. Depending on the user's skin type, the challenge provides a user-friendly skin care function while allowing the user to perform missions such as moisture soothing pack and drinking more than 1L of water per day. In these days, when the desire to be beautiful continues to increase, concerns about good skin are inevitably growing, and our application HISKIN will be a good solution in this situation. \cite{zhang2020impact}
+\end{abstract}
+
+\begin{IEEEkeywords}
+skin care, HISKIN, User-Friendly Application, AI, Beauty Device, Communication
+\end{IEEEkeywords}
+
+\begin{table} [h]
+    \caption{Task Distributions for Each Member}
+    \centering
+    \begin{tabular}{l|l|l}
+    \hline
+    \textit{\textbf{Roles}} & \textit{\textbf{Name}} & \textit{\textbf{Description}}
+    & & & \\ 
+    \hline
+   \textit{\textbf{\begin{tabular}[c]{@{}l@{}}Software \\ Developer\\(Front-End)\end{tabular}}} & \textit{\textbf{\begin{tabular}[c]{@{}l@{}}HAE \\ RYUNG \\ CHA\end{tabular}}}& \begin{tabular}[c]{@{}l@{}}A software developer(Front-End) designs\\ applications using languages such as\\ HTML, CSS and React-Native. Key\\ responsibilities include developing responsive\\ interfaces, implementing interactive\\ features and navigation components, and \\optimizing code for performance. Essential\\ skills and qualifications include \\knowledge of responsive web design, \\mobile-first development, problem-solving abilities,\\ and excellent communication skills.\end{tabular} \\ \hline
+   \textit{\textbf{\begin{tabular}[c]{@{}l@{}}Software\\ Developer\\(Back-End)\end{tabular}}} & \textit{\textbf{\begin{tabular}[c]{@{}l@{}}SEOK \\ YOUNG \\ KIM\end{tabular}}}& \begin{tabular}[c]{@{}l@{}}Backend is a technology\\ that manages servers or databases, \\areas that users in web applications \\do not see. The backend is responsible \\for managing data or running servers \\so that users can provide the information \\they want. In other words, the backend is\\ about dealing with what users at the \\front-end want to-do. As a result, backend \\developers engage in various development \\activities, including system component \\work, API creation, library creation, and \\database integration. \end{tabular} \\ \hline
+   \textit{\textbf{\begin{tabular}[c]{@{}l@{}}Software\\ Developer\\(Machine\\Learning)\end{tabular}}} &\textit{\textbf{\begin{tabular}[c]{@{}l@{}}YU \\ JIN \\ PARK\end{tabular}}} & \begin{tabular}[c]{@{}l@{}} A Machine Learning Engineer is\\ responsible for designing and developing\\ machine learning systems, implementing \\appropriate ML algorithms, conducting\\ experiments, and staying updated with \\the latest developments in the field. \\They work with data to create models\\, perform statistical analysis, and train\\and retain systems to optimize performance.\\ Their goal is to build efficient self-learning\\applications and contribute to \\advancements in artificial intelligence. \end{tabular} \\ \hline
+   \textit{\textbf{\begin{tabular}[c]{@{}l@{}}Project\\ Designer\\(Documentation)\end{tabular}}} & \textit{\textbf{\begin{tabular}[c]{@{}l@{}}CHAN \\ MIN \\ KIM\end{tabular}}}& \begin{tabular}[c]{@{}l@{}} A project designer's primary role is\\ to craft a product with a user-centric\\ approach, demonstrating a deep capacity \\to empathize with and comprehend\\ the user's journey. This pivotal role \\involves shaping the fundamental structure\\ of a product or service. The project designer\\ is entrusted with fostering seamless \\communication among team members \\and fostering collaboration. The project \\designer's central focus lies in enhancing\\ the product or service's usability,\\ adapting the product's design as \\necessary to achieve superior outcomes.
+ \end{tabular} \\ \hline
+   \end{tabular}
+\end{table}
+
+\clearpage
+
+\section{Introduction}
+\subsection{Motivation} 
+According to a survey conducted by market research firm Embrain Trend Monitor in 2022, significant changes in awareness about skincare have been observed. The survey targeted 1,000 adults aged 19 to 59 and examined their perceptions related to skincare. The results showed a decrease in satisfaction with their skin condition from 41.4\% in 2019 to 37.8\%. Furthermore, 64.2\% of respondents reported increased concerns about their skin. This data suggests that many people have become less satisfied with their skin condition recently, leading them to desire healthier and more vibrant skin.
+\\Several factors contribute to this shift in perception. Firstly, in today's era of social media, platforms like Instagram, YouTube, and Facebook provide easy access to information about skincare and beauty. Influencers and beauty experts share product reviews, skincare tips, and personal experiences, inspiring users to take a greater interest in skincare and develop their skincare routines.
+\\Secondly, there is a rising interest in health and well-being. Healthy skin is perceived as a crucial indicator of overall health and well-being, prompting many individuals to pursue better health through skincare. Skincare is not only seen as a means to enhance one's appearance but also as a way to improve skin health.
+\\As a result of these trends, interest in skincare and beauty devices has been on the rise. According to Embrain Trend Monitor's survey, there is a growing interest in home beauty and skincare. 81.2\% of women perceive skincare devices as popular, and products like those from LG Pra.L and Medique have been predicted to become more prevalent. These devices are considered cost-effective alternatives that allow for convenient skincare at home compared to visiting dermatologists.
+\begin{figure} [h]
+    \includegraphics[width=\columnwidth]{fig/PraL1.jpg}
+    \caption{LG Pra.L Care}
+\end{figure}
+\\However, this increased interest and device usage come with some skepticism and concerns. Users have doubts about the safety and effectiveness of skincare devices, and there are worries about the potential side effects of performing skincare independently. In fact, a significant percentage of consumers have experienced side effects when using home beauty devices. According to a 2019 survey by the Consumer Education Center, 10\% of users reported experiencing side effects. This is often due to a lack of information about potential side effects associated with these devices, highlighting a communication gap between users and skincare devices that differs from traditional dermatology practices.
+\\In conclusion, the changing perceptions of skincare and home beauty are the result of various interacting factors, leading to emerging market trends and consumer demands related to skincare devices. Therefore, we have decided to create a more comfortable, safe, and user-friendly app to accompany skincare devices to address these evolving consumer needs. \cite{kim2022skincare}
+
+
+\subsection{Problem Statement}\label{SCM}
+\begin{itemize}
+\item [1] Many people are currently experiencing significant difficulties and discomfort while using skincare beauty devices. The reason for this is that skincare beauty devices often fail to provide users with sufficient information about the potential risks and side effects, unlike procedures conducted by professional skincare experts or dermatologists.\\ \cite{Song2022beautydevice}
+\item [2] Consumers often struggle to establish consistent skincare routines even when using skincare beauty devices. This is primarily because these devices typically provide instructions and information specific to the device itself, often lacking personalized advice based on individual users' skin conditions and needs.\\
+\item [3] Consumers consider homecare devices as alternatives to dermatological services, seeking a similar experience even if not entirely equivalent. However, currently available skincare beauty devices often fall short in providing users with comprehensive information compared to dermatologists, making users perceive them as somewhat "clinical." Furthermore, when receiving skincare services at a dermatologist's office, the interaction with the dermatologist adds an element of "fun" or engagement to the experience, which is lacking when using skincare beauty devices. Consequently, many consumers desire to acquire enjoyable or informative aspects akin to visiting a dermatologist while using skincare beauty devices.
+\end{itemize}
+\\
+\\
+\subsection{Research on Related Software}\label{SCM}
+\begin{itemize}
+A. LG Pra.L Care
+\begin{figure} [h]
+    \includegraphics[width=\columnwidth]{fig/PraL2.png}
+    \caption{LG Pra.L Care}
+\end{figure}
+\\
+\item LG Pra.L Care is an app created by the South Korean conglomerate LG, designed to enhance the effectiveness of skincare routines for users who own LG Pra.L products. This app offers several key features, including the ability to determine the user's skin type through a 15-question survey and provide recommendations on how to use LG Pra.L products more effectively. Additionally, it offers daily skincare tips based on the weather and air quality and provides a ranking system for skincare products tailored to the user's skin type, assessing their suitability as a percentage match.
+\\
+\\
+
+B. HWAHAE
+\begin{figure} [h]
+    \includegraphics[width=\columnwidth]{fig/hwahae1.png}
+    \caption{HWAHAE}
+\end{figure}
+\\
+\\
+\\
+\item HWAHAE is the leading domestic cosmetics app in South Korea, ideal for consumers who are unsure about which skincare or cosmetic products to purchase. This app's primary features include ingredient analysis and user reviews. The review feature mandates users to list both the pros and cons of the products, allowing consumers to gain in-depth insights into the products they intend to buy. Users can also explore popular products by category through the ranking feature, identifying which cosmetics are currently trending. Furthermore, the "HWAHAE PLUS" section offers beauty-related information, including details about cosmetics and skincare.
+\\
+\\
+C. Glowpick
+\begin{figure} [h]
+    \includegraphics[width=\columnwidth]{fig/glowpick1.jpg}
+    \caption{Glowpick}
+\end{figure}
+\\
+\item "Glowpick" is an app that lives up to its slogan of "Finding good cosmetics is a good habit" by offering users cosmetic rankings based on honest product reviews from real consumers. This app not only includes products launched domestically but also registers and sells products from various sources, including roadshops, drugstores, department stores, and even products not officially released in South Korea.\\Furthermore, Glowpick provides category-specific rankings for products available in each offline purchasing channel, such as Olive Young, Watsons, LOHBs, and Aritaum. It also offers a wealth of information, including diverse sale details, makeup buying tips, and a review search feature that helps consumers discover great cosmetics through user reviews. Additionally, it provides comprehensive information about the ingredients contained in each cosmetic product.
+\\
+\\
+D. FOREO For You
+\begin{figure} [h]
+    \includegraphics[width=\columnwidth]{fig/FOREO1.png}
+    \caption{FOREO For You}
+\end{figure}
+\\
+\item FOREO For You is an app that works in conjunction with FOREO's skincare devices, offering skin analysis and personalized skincare guidance. Additionally, this app monitors skin conditions and assists users in using the devices effectively..
+\\
+\\
+E. Clarisonic Mia Smart
+\begin{figure} [h]
+    \includegraphics[width=\columnwidth]{fig/Clarisonic1.jpg}
+    \caption{Clarisonic Mia Smart}
+\end{figure}
+\\
+\item Clarisonic Mia Smart is an application that connects to Clarisonic's skincare devices, providing skin analysis and customized skincare routines to users through videos and photos demonstrating how to use the skincare device effectively.
+
+
+\end{itemize}
+\\
+
+\section{REQUIREMENT ANALYSIS}
+
+\subsection{Create an Account}
+If users are new to the app, they can create an account by clicking the "Sign Up" button. After clicking the button, users will be asked to answer a few questions to provide their information and create the account. The following items are the information that is needed for creating an account:
+\begin{itemize}
+    \item Name
+    \item Gender
+    \item Date of Birth(YY.MM.DD)
+    \item Nickname
+    \item ID
+    \item Password
+\end{itemize}
+After entering all the information, user will be taken to the login page. In addition, user can edit their information on "My Page".\\
+\subsection{Login}
+Signing in is a crucial step for all members to gain entry to the application, acting as the pathway to harness the complete spectrum of features offered by HISKIN. The process of logging in involves inputting the ID and password that were initially provided during the registration phase. This mandatory login procedure constitutes a fundamental element of the HISKIN platform, granting users access to a tailored skincare experience and empowering them to proficiently oversee their skin. The authentication mechanism, employing an ID and password, plays a pivotal role in upholding account security and ensuring the protection of confidential information.\\
+\subsection{Skin Type Diagnosis}
+The app offers a "Skin Type Diagnosis" feature that helps users determine their skin type. Users answer a series of questions about their skin through a survey format. The app then automatically provides information about the user's skin type based on their responses.\\
+\subsection{Cosmetic Recommendations}
+Users can receive recommendations for cosmetics suitable for their skin type. The app uses data scraped from Glowpick to provide users with the top 3 cosmetics for each skin type, enabling them to engage in skincare beyond the use of beauty devices.\\
+\subsection{Device Registration}
+Users can register their skincare devices within the app by clicking the "Device Registration" button. \\
+\subsection{Interactive Voice AI Communication}
+The app enables two-way communication with skincare devices via voice recognition. This interaction allows for daily conversations, addressing concerns, and providing personalized skincare product recommendations based on user preferences.\\
+\subsection{Community}
+The app offers a community feature, allowing users to communicate with each other. Users can share their skincare concerns and effective skincare tips through the community, making interaction easier with comments and like buttons. \\
+\subsection{AI Interactive Skincare Challenges}
+The app offers daily skincare challenges tailored to the user's skin type. Completing these challenges can help users improve their skincare habits and routines. \\
+\subsection{Today's Skin Status}
+"Today's Skin Status" allows users to track their daily skin condition and skincare routines through the app. All recorded data is stored and can be used to generate monthly statistics about skin conditions and skincare practices.\\
+\subsection{My Page}
+Users can check their skin type diagnosis results, registered beauty devices, and skincare journal for the past week on their My Page. Additionally, there is a feature that allows users to redo the skin type diagnosis.\\
+
+\section{development environment}
+\subsection{Choices of Software Development Platform}
+\begin{enumerate}
+    \item[a.] Development Platform
+    
+    \begin{enumerate}
+    \item[1.] Windows \cite{novac2017comparative} \cite{stallings2005windows}
+    \item[] Windows operating system is popular among both users and developers for various reasons. For users, it provides a familiar and user-friendly interface, making everyday computing tasks straightforward. Additionally, a wide range of software and games are predominantly supported and optimized for Windows, allowing users to access diverse applications seamlessly.
+    \\
+    Developers benefit from Windows through its rich development tools and integrated development environments. Robust tools like Visual Studio support various programming languages and frameworks, facilitating apps and web development and enterprise solution building. Windows provides an environment for developing applications for different platforms and is optimized for game development and graphic work.
+    \\
+    Moreover, Windows exhibits excellent compatibility with various hardware and software, enabling developers to work across different environments more efficiently. This feature is particularly crucial in business and enterprise environments, where many companies adopt Windows to develop and utilize enterprise-level software. Therefore, Windows is acknowledged as a powerful operating system that caters to a broad spectrum of tasks and requirements for both users and developers. \\
+
+    \item[2.] MacOS \cite{sherry2013foundation}
+    \item[] MacOS is a favored operating system among web and app developers for several reasons. Its Unix-based foundation provides a powerful command-line interface, making it conducive for development tasks. The terminal offers a robust environment for running scripts, installing packages, and executing various developer tools, enhancing efficiency in development workflows.
+    \\
+    Developers appreciate MacOS for its compatibility with a wide array of programming languages and frameworks. Xcode, the integrated development environment exclusive to MacOS, stands out for creating applications across Apple's ecosystem, including MacOS, iOS, WatchOS, and TvOS. The development environment, combined with the availability of software development kits (SDKs), facilitates the creation of high-quality, native applications.
+    \\
+    Moreover, MacOS is highly regarded for its stability and security, essential factors for developers handling sensitive data and applications. The system's stability ensures a reliable platform for coding and testing, while its security features offer a protective environment for sensitive development projects.
+    \\
+    For web developers, MacOS supports a variety of web development tools, including popular editors like Visual Studio Code, Sublime Text, and Atom. The operating system's compatibility with web technologies, such as HTML, CSS, and JavaScript, along with its Unix core, provides an ideal environment for web development projects.
+    \\
+    Lastly, the integration of hardware and software in Apple products often enhances the development experience. The seamless connection between Apple devices and the ability to test applications on various Apple products contributes to the appeal of MacOS among app developers aiming to create high-quality, well-integrated software for Apple users. Overall, MacOS is a preferred operating system for web and app developers due to its strong development tools, Unix-based environment, and seamless integration with Apple's hardware and software ecosystem. \\
+    \end{enumerate}
+
+  \item[b.]Tools and Language
+
+    \begin{enumerate}
+        \item[1.]Git \cite{velog-git}
+        \item[]Git functions as an efficient tool for controlling versions, ensuring seamless integration of modifications and updates. However, before exploring Git, let's grasp the concept of a 'version control system.' It essentially captures and tracks alterations made to a file, enabling easy retrieval of any previous version when necessary. During the process of working on a document, numerous revisions occur, progressing from the initial draft to the final version. Often, files are renamed as 'final,' 'final,' 'finalized,' and so forth, ultimately replacing the previous versions. This practice can complicate the task of reverting to a specific point in time to comprehend the modifications made. Yet, a version control system resolves this issue. It empowers the management of numerous iterations of the same data, allowing the monitoring of changes across time and attributing them to specific contributors. It becomes simple to revert to prior or original versions and promptly identify the responsible individuals for any arising issues.\\
+    \end{enumerate}
+\end{enumerate}
+
+\subsection{Software in use}
+\begin{enumerate}
+    \item[1.]GitHub
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=.5\columnwidth]{fig/GitHub-logo.png}
+    \label{fig:GitHub}
+    \caption{GitHub} 
+    \end{figure}
+    \item[]GitHub acts as a platform supporting projects utilizing Git, functioning as a remote command center for Git operations. It provides a hub for version control and developer collaboration, operating as a cloud-based version control system. Git and GitHub are commonly used interchangeably for modern software development collaborations, yet GitHub's functionalities extend beyond this scope. To begin, GitHub is the preferred choice for open-source software, granting access to diverse tool source codes used within our team. Moreover, GitHub serves as a repository for identifying issues or bugs in open libraries. Additionally, it boasts various collaborative features: Pull requests enable thorough reviews of work in different Git branches before merging, and GitHub actions streamline the implementation of continuous integration and continuous deployment (CI/CD). Within our team, we employ GitHub actions to monitor team progress and aid in collectively addressing and resolving errors.\\
+
+    \item[2.]Notion
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=.5\columnwidth]{fig/notion_logo.png}
+    \label{fig:Notion}
+    \caption{Notion} 
+    \end{figure}
+    \item[]Notion is a Software as a Service (SaaS) application accessed via the web, operating as a wiki platform. A key benefit is its capability to generate articles in MD file format and provide live updates. With recent enhancements, it has evolved into an invaluable resource for overseeing project details and effectively handling meeting minutes.\\
+
+    \item[3.]Overleaf
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=.5\columnwidth]{fig/overLeaf.png}
+    \label{fig:OverLeaf}
+    \caption{OverLeaf} 
+    \end{figure}
+    \item[]Overleaf serves as an online tool supporting cooperative composition and editing of LaTeX documents. It boasts an intuitive interface specifically designed for the creation of scientific and technical materials like research papers, reports, and theses. Through Overleaf, several team members can work together on a document concurrently, ensuring smooth collaboration and effective monitoring of modifications. Moreover, it integrates pre-installed functionalities for handling references, equations, tables, and graphics, making it a favored option among scholars and researchers. The content of this document was produced using Overleaf's IEEE template.\\
+
+    \item[10.]ChatGPT
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=.5\columnwidth]{fig/chatGPT.png}
+    \label{fig:ChatGPT}
+    \caption{ChatGPT} 
+    \end{figure}
+    \item[]ChatGPT is an AI-driven application that facilitates immediate interactions with an AI. While GPT-3.5 was trained on data until 2021, GPT-4 has been trained on more current information. ChatGPT has transformed generative AI, providing improved functionalities for activities like creating reports, summarizing articles, addressing problems, and even assisting with coding tasks.\\ 
+\end{enumerate}
+
+\subsection{Cost Estimation}
+In the creation of HISKIN, we make effective use of a wide array of cost-efficient software solutions that are readily available for free. This approach allows us to keep development costs to a minimum. However, it's worth noting that while using the ChatGPT API does involve some expenses, there's a provision that grants you access to a free quota of less than \$20, which translates to the ability to ask approximately 300,000 questions without incurring any charges. Therefore, you can rest assured that the operational costs of the application will remain relatively low.\\ \\ \\ \\ \\ \\
+
+\subsection{Task Distribution}
+\\
+\begin{table} [h]
+\centering
+\caption{Team Members and Their Tasks}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{| p{3cm}|p{3cm}|}
+
+\hline
+Tasks & Name \\
+
+\hline
+Frontend Developer & HAE RYUNG CHA\\
+
+\hline
+Backend Developer & SEOK YOUNG KIM\\
+
+\hline
+UI-UX Designer & HAE RYUNG CHA\\
+
+\hline
+AI Developer & Yu Jin Park\\
+
+\hline
+Product Designer & Chan Min Kim\\
+
+\hline
+\end{tabular}
+\end{table}
+
+\bibliographystyle{IEEEtran} 
+\bibliography{references}
+
+\end{document}
