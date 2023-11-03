@@ -1,0 +1,580 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{tabularx}
+\hbadness=9
+\vbadness=9
+\hfuzz=20pt
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+
+\title{HISKIN\\
+
+}
+
+\author{\IEEEauthorblockN{1\textsuperscript{st} CHAN MIN KIM}
+\IEEEauthorblockA{\textit{Dept. Information System} \\
+\textit{College of Engineering}\\
+\textit{Hanyang University}\\
+Seoul, Korea \\
+han2cmk@hanyang.ac.kr}
+\and
+\IEEEauthorblockN{2\textsuperscript{nd} SEOK YOUNG KIM}
+\IEEEauthorblockA{\textit{Dept. Information System} \\
+\textit{College of Engineering}\\
+\textit{Hanyang University}\\
+Seoul, Korea \\
+kim2653seok@gmail.com}
+\and
+\IEEEauthorblockN{3\textsuperscript{rd} HAE RYUNG CHA}
+\IEEEauthorblockA{\textit{Dept. Information System} \\
+\textit{College of Engineering}\\
+\textit{Hanyang University}\\
+Seoul, Korea \\
+haeryung8@hanyang.ac.kr}
+\and
+\IEEEauthorblockN{4\textsuperscript{th} YU JIN PARK}
+\IEEEauthorblockA{\textit{Dept. Information System} \\
+\textit{College of Engineering}\\
+\textit{Hanyang University}\\
+Seoul, Korea \\
+jinee22@hanyang.ac.kr}
+
+}
+
+\maketitle
+\thispagestyle{plain}
+\pagestyle{plain}
+
+\begin{abstract}
+
+Nowadays, with the increasing importance of skincare, a growing number of busy modern people are trying skincare at home by purchasing beauty devices instead of going to a dermatologist. For these customers, companies such as LG and FOREO are providing beauty devices and applications that can be linked to them. However, managing at home with a beauty device has several weaknesses in place of dermatology. First, there is a lack of communication. Many companies are trying to provide communication such as management methods, but it is still not enough to replace dermatology. The second is that it ends with care. Skin care requires care tailored to one's own skin type even after care, but there is a lack of action. To develop an application that can compensate for these weaknesses, our team is trying to develop a user-friendly application called HISKIN that can work with beauty devices for those who have difficulty taking care of their skin. It is managed by a beauty device registered by a user, and at the same time, it enables communication with users by using AI voice recognition technology. It provides communication functions on various topics such as skin care tips, daily conversations, and management methods according to the user's mood in addition to the existing function of providing guidance on how to use devices. Through these functions, we expect users can enjoy the same service as meeting a doctor in person. And also, through additional challenges program, users can take care of their skin not only at the moment they use the device, but also after care or normally. Depending on the user's skin type, the challenge provides a user-friendly skin care function while allowing the user to perform missions such as moisture soothing pack and drinking more than 1L of water per day. In these days, when the desire to be beautiful continues to increase, concerns about good skin are inevitably growing, and our application HISKIN will be a good solution in this situation. \cite{zhang2020impact}
+\end{abstract}
+
+\begin{IEEEkeywords}
+skin care, HISKIN, User-Friendly Application, AI, Beauty Device, Communication
+\end{IEEEkeywords}
+
+\begin{table} [h]
+    \caption{Task Distributions for Each Member}
+    \centering
+    \begin{tabular}{l|l|l}
+    \hline
+    \textit{\textbf{Roles}} & \textit{\textbf{Name}} & \textit{\textbf{Description}}
+    & & & \\ 
+    \hline
+   \textit{\textbf{\begin{tabular}[c]{@{}l@{}}Software \\ Developer\\(Front-End)\end{tabular}}} & \textit{\textbf{\begin{tabular}[c]{@{}l@{}}HAE \\ RYUNG \\ CHA\end{tabular}}}& \begin{tabular}[c]{@{}l@{}}A software developer(Front-End) designs\\ applications using languages such as\\ HTML, CSS and React-Native. Key\\ responsibilities include developing responsive\\ interfaces, implementing interactive\\ features and navigation components, and \\optimizing code for performance. Essential\\ skills and qualifications include \\knowledge of responsive web design, \\mobile-first development, problem-solving abilities,\\ and excellent communication skills.\end{tabular} \\ \hline
+   \textit{\textbf{\begin{tabular}[c]{@{}l@{}}Software\\ Developer\\(Back-End)\end{tabular}}} & \textit{\textbf{\begin{tabular}[c]{@{}l@{}}SEOK \\ YOUNG \\ KIM\end{tabular}}}& \begin{tabular}[c]{@{}l@{}}Backend is a technology\\ that manages servers or databases, \\areas that users in web applications \\do not see. The backend is responsible \\for managing data or running servers \\so that users can provide the information \\they want. In other words, the backend is\\ about dealing with what users at the \\front-end want to-do. As a result, backend \\developers engage in various development \\activities, including system component \\work, API creation, library creation, and \\database integration. \end{tabular} \\ \hline
+   \textit{\textbf{\begin{tabular}[c]{@{}l@{}}Software\\ Developer\\(Machine\\Learning)\end{tabular}}} &\textit{\textbf{\begin{tabular}[c]{@{}l@{}}YU \\ JIN \\ PARK\end{tabular}}} & \begin{tabular}[c]{@{}l@{}} A Machine Learning Engineer is\\ responsible for designing and developing\\ machine learning systems, implementing \\appropriate ML algorithms, conducting\\ experiments, and staying updated with \\the latest developments in the field. \\They work with data to create models\\, perform statistical analysis, and train\\and retain systems to optimize performance.\\ Their goal is to build efficient self-learning\\applications and contribute to \\advancements in artificial intelligence. \end{tabular} \\ \hline
+   \textit{\textbf{\begin{tabular}[c]{@{}l@{}}Project\\ Designer\\(Documentation)\end{tabular}}} & \textit{\textbf{\begin{tabular}[c]{@{}l@{}}CHAN \\ MIN \\ KIM\end{tabular}}}& \begin{tabular}[c]{@{}l@{}} A project designer's primary role is\\ to craft a product with a user-centric\\ approach, demonstrating a deep capacity \\to empathize with and comprehend\\ the user's journey. This pivotal role \\involves shaping the fundamental structure\\ of a product or service. The project designer\\ is entrusted with fostering seamless \\communication among team members \\and fostering collaboration. The project \\designer's central focus lies in enhancing\\ the product or service's usability,\\ adapting the product's design as \\necessary to achieve superior outcomes.
+ \end{tabular} \\ \hline
+   \end{tabular}
+\end{table}
+
+\clearpage
+
+\section{Introduction}
+\subsection{Motivation} 
+According to a survey conducted by market research firm Embrain Trend Monitor in 2022, significant changes in awareness about skincare have been observed. The survey targeted 1,000 adults aged 19 to 59 and examined their perceptions related to skincare. The results showed a decrease in satisfaction with their skin condition from 41.4\% in 2019 to 37.8\%. Furthermore, 64.2\% of respondents reported increased concerns about their skin. This data suggests that many people have become less satisfied with their skin condition recently, leading them to desire healthier and more vibrant skin.
+\\Several factors contribute to this shift in perception. Firstly, in today's era of social media, platforms like Instagram, YouTube, and Facebook provide easy access to information about skincare and beauty. Influencers and beauty experts share product reviews, skincare tips, and personal experiences, inspiring users to take a greater interest in skincare and develop their skincare routines.
+\\Secondly, there is a rising interest in health and well-being. Healthy skin is perceived as a crucial indicator of overall health and well-being, prompting many individuals to pursue better health through skincare. Skincare is not only seen as a means to enhance one's appearance but also as a way to improve skin health.
+\\As a result of these trends, interest in skincare and beauty devices has been on the rise. According to Embrain Trend Monitor's survey, there is a growing interest in home beauty and skincare. 81.2\% of women perceive skincare devices as popular, and products like those from LG Pra.L and Medique have been predicted to become more prevalent. These devices are considered cost-effective alternatives that allow for convenient skincare at home compared to visiting dermatologists.
+\begin{figure} [h]
+    \centering
+    \includegraphics[width=.6\columnwidth]{fig/PraL1.jpg}
+    \caption{LG Pra.L Care}
+\end{figure}
+\\However, this increased interest and device usage come with some skepticism and concerns. Users have doubts about the safety and effectiveness of skincare devices, and there are worries about the potential side effects of performing skincare independently. In fact, a significant percentage of consumers have experienced side effects when using home beauty devices. According to a 2019 survey by the Consumer Education Center, 10\% of users reported experiencing side effects. This is often due to a lack of information about potential side effects associated with these devices, highlighting a communication gap between users and skincare devices that differs from traditional dermatology practices.
+\\In conclusion, the changing perceptions of skincare and home beauty are the result of various interacting factors, leading to emerging market trends and consumer demands related to skincare devices. Therefore, we have decided to create a more comfortable, safe, and user-friendly app to accompany skincare devices to address these evolving consumer needs. \cite{kim2022skincare}
+
+
+\subsection{Problem Statement}\label{SCM}
+\begin{itemize}
+\item [1] Many people are currently experiencing significant difficulties and discomfort while using skincare beauty devices. The reason for this is that skincare beauty devices often fail to provide users with sufficient information about the potential risks and side effects, unlike procedures conducted by professional skincare experts or dermatologists.\\ \cite{Song2022beautydevice}
+\item [2] Consumers often struggle to establish consistent skincare routines even when using skincare beauty devices. This is primarily because these devices typically provide instructions and information specific to the device itself, often lacking personalized advice based on individual users' skin conditions and needs.\\
+\item [3] Consumers consider homecare devices as alternatives to dermatological services, seeking a similar experience even if not entirely equivalent. However, currently available skincare beauty devices often fall short in providing users with comprehensive information compared to dermatologists, making users perceive them as somewhat "clinical." Furthermore, when receiving skincare services at a dermatologist's office, the interaction with the dermatologist adds an element of "fun" or engagement to the experience, which is lacking when using skincare beauty devices. Consequently, many consumers desire to acquire enjoyable or informative aspects akin to visiting a dermatologist while using skincare beauty devices.
+\end{itemize}
+\\
+\\
+
+\subsection{Research on Related Software}\label{SCM}
+\begin{enumerate}
+    \item[A.] LG Pra.L Care
+    \begin{figure} [h]
+    \includegraphics[width=\columnwidth]{fig/PraL2.png}
+    \caption{LG Pra.L Care}
+    \end{figure}
+\item[] LG Pra.L Care is an app created by the South Korean conglomerate LG, designed to enhance the effectiveness of skincare routines for users who own LG Pra.L products. This app offers several key features, including the ability to determine the user's skin type through a 15-question survey and provide recommendations on how to use LG Pra.L products more effectively. Additionally, it offers daily skincare tips based on the weather and air quality and provides a ranking system for skincare products tailored to the user's skin type, assessing their suitability as a percentage match.
+\\
+\\
+
+
+\item[B.] HWAHAE
+\begin{figure} [h]
+    \includegraphics[width=\columnwidth]{fig/hwahae1.png}
+    \caption{HWAHAE}
+\end{figure}
+\item[] HWAHAE is the leading domestic cosmetics app in South Korea, ideal for consumers who are unsure about which skincare or cosmetic products to purchase. This app's primary features include ingredient analysis and user reviews. The review feature mandates users to list both the pros and cons of the products, allowing consumers to gain in-depth insights into the products they intend to buy. Users can also explore popular products by category through the ranking feature, identifying which cosmetics are currently trending. Furthermore, the "HWAHAE PLUS" section offers beauty-related information, including details about cosmetics and skincare.
+\\
+
+\\
+\item[C. ] Glowpick
+\begin{figure} [h]
+    \centering
+    \includegraphics[width=.5\columnwidth]{fig/glowpick1.jpg}
+    \caption{Glowpick}
+\end{figure}
+\item[] "Glowpick" is an app that lives up to its slogan of "Finding good cosmetics is a good habit" by offering users cosmetic rankings based on honest product reviews from real consumers. This app not only includes products launched domestically but also registers and sells products from various sources, including roadshops, drugstores, department stores, and even products not officially released in South Korea.\\Furthermore, Glowpick provides category-specific rankings for products available in each offline purchasing channel, such as Olive Young, Watsons, LOHBs, and Aritaum. It also offers a wealth of information, including diverse sale details, makeup buying tips, and a review search feature that helps consumers discover great cosmetics through user reviews. Additionally, it provides comprehensive information about the ingredients contained in each cosmetic product.
+\clearpage
+
+\item[D. ] FOREO For You
+\begin{figure} [h]
+    \centering
+    \includegraphics[width=.5\columnwidth]{fig/FOREO1.png}
+    
+    \caption{FOREO For You}
+\end{figure}
+\item[] FOREO For You is an app that works in conjunction with FOREO's skincare devices, offering skin analysis and personalized skincare guidance. Additionally, this app monitors skin conditions and assists users in using the devices effectively.
+\\
+\\
+
+\item[E. ] Clarisonic Mia Smart
+\begin{figure} [h]
+    \includegraphics[width=\columnwidth]{fig/Clarisonic1.jpg}
+    \caption{Clarisonic Mia Smart}
+\end{figure}
+\\
+\item[] Clarisonic Mia Smart is an application that connects to Clarisonic's skincare devices, providing skin analysis and customized skincare routines to users through videos and photos demonstrating how to use the skincare device effectively.
+
+\end{enumerate}
+\\
+
+\section{REQUIREMENT ANALYSIS}
+
+\subsection{Create an Account}
+If users are new to the app, they can create an account by clicking the "Sign Up" button. After clicking the button, users will be asked to answer a few questions to provide their information and create the account. The following items are the information that is needed for creating an account:
+\begin{itemize}
+    \item Name
+    \item Gender
+    \item Nickname
+    \item ID (email)
+    \item Password
+\end{itemize}
+After entering all the information, user will be taken to the login page. In addition, user can edit their information on "My Page".\\
+\subsection{Login}
+Signing in is a crucial step for all members to gain entry to the application, acting as the pathway to harness the complete spectrum of features offered by HISKIN. The process of logging in involves inputting the ID and password that were initially provided during the registration phase. This mandatory login procedure constitutes a fundamental element of the HISKIN platform, granting users access to a tailored skincare experience and empowering them to proficiently oversee their skin. The authentication mechanism, employing an ID and password, plays a pivotal role in upholding account security and ensuring the protection of confidential information.\\
+\subsection{Skin Type Diagnosis}
+The app offers a "Skin Type Diagnosis" feature that helps users determine their skin type. Users answer a series of questions about their skin through a survey format. The app then automatically provides information about the user's skin type based on their responses.\\
+\subsection{Cosmetic Recommendations}
+Users can receive recommendations for cosmetics suitable for their skin type. The app uses data scraped from Glowpick to provide users with the top 3 cosmetics for each skin type, enabling them to engage in skincare beyond the use of beauty devices.\\
+\subsection{Device Registration}
+Users can register their skincare devices within the app by clicking the "Device Registration" button. \\
+\subsection{Interactive Voice AI Communication}
+The app enables two-way communication with skincare devices via voice recognition. This interaction allows for daily conversations, addressing concerns, and providing personalized skincare product recommendations based on user preferences.\\
+\subsection{Community}
+The app offers a community feature, allowing users to communicate with each other. Users can share their skincare concerns and effective skincare tips through the community, making interaction easier with comments and like buttons. \\
+\subsection{AI Interactive Skincare Challenges}
+The app offers daily skincare challenges tailored to the user's skin type. Completing these challenges can help users improve their skincare habits and routines. \\
+\subsection{Today's Skin Status}
+"Today's Skin Status" allows users to track their daily skin condition and skincare routines through the app. All recorded data is stored and can be used to generate monthly statistics about skin conditions and skincare practices.\\
+\subsection{My Page}
+Users can check their skin type diagnosis results, registered beauty devices, and skincare journal for the past week on their My Page. Additionally, there is a feature that allows users to redo the skin type diagnosis.\\
+
+\section{development environment}
+\subsection{Choices of Software Development Platform}
+\begin{enumerate}
+    \item[a.] Development Platform
+    
+    \begin{enumerate}
+    \item[1.] Windows \cite{novac2017comparative} \cite{stallings2005windows}
+    \item[] Windows operating system is popular among both users and developers for various reasons. For users, it provides a familiar and user-friendly interface, making everyday computing tasks straightforward. Additionally, a wide range of software and games are predominantly supported and optimized for Windows, allowing users to access diverse applications seamlessly.
+    \\
+    Developers benefit from Windows through its rich development tools and integrated development environments. Robust tools like Visual Studio support various programming languages and frameworks, facilitating apps and web development and enterprise solution building. Windows provides an environment for developing applications for different platforms and is optimized for game development and graphic work.
+    \\
+    Moreover, Windows exhibits excellent compatibility with various hardware and software, enabling developers to work across different environments more efficiently. This feature is particularly crucial in business and enterprise environments, where many companies adopt Windows to develop and utilize enterprise-level software. Therefore, Windows is acknowledged as a powerful operating system that caters to a broad spectrum of tasks and requirements for both users and developers. \\
+
+    \item[2.] MacOS \cite{sherry2013foundation}
+    \item[] MacOS is a favored operating system among web and app developers for several reasons. Its Unix-based foundation provides a powerful command-line interface, making it conducive for development tasks. The terminal offers a robust environment for running scripts, installing packages, and executing various developer tools, enhancing efficiency in development workflows.
+    \\
+    Developers appreciate MacOS for its compatibility with a wide array of programming languages and frameworks. Xcode, the integrated development environment exclusive to MacOS, stands out for creating applications across Apple's ecosystem, including MacOS, iOS, WatchOS, and TvOS. The development environment, combined with the availability of software development kits (SDKs), facilitates the creation of high-quality, native applications.
+    \\
+    Moreover, MacOS is highly regarded for its stability and security, essential factors for developers handling sensitive data and applications. The system's stability ensures a reliable platform for coding and testing, while its security features offer a protective environment for sensitive development projects.
+    \\
+    For web developers, MacOS supports a variety of web development tools, including popular editors like Visual Studio Code, Sublime Text, and Atom. The operating system's compatibility with web technologies, such as HTML, CSS, and JavaScript, along with its Unix core, provides an ideal environment for web development projects.
+    \\
+    Lastly, the integration of hardware and software in Apple products often enhances the development experience. The seamless connection between Apple devices and the ability to test applications on various Apple products contributes to the appeal of MacOS among app developers aiming to create high-quality, well-integrated software for Apple users. Overall, MacOS is a preferred operating system for web and app developers due to its strong development tools, Unix-based environment, and seamless integration with Apple's hardware and software ecosystem. \\
+
+    \item[3.] Android \cite{singh2014overview}
+    \item[]The Android operating system stands as one of the most prevalent mobile OS platforms in use today. Rooted in the Linux kernel, it is the brainchild of Google, tailored primarily for smartphones and tablets. Its open-source architecture has spurred unprecedented growth, making it the swiftly burgeoning choice among users and developers. This open nature allows for easy customization and integration of advanced functionalities, aligning with the dynamic needs of mobile technology.\\
+    With over 1.5 billion applications and games downloaded monthly from the Google Play Store, the Android OS is revered for its robust development framework. Users and software developers leverage its power to create a diverse array of applications for a broad spectrum of devices. To support seamless software development, Android furnishes the Android Software Development Kit (SDK), employing the Java programming language. This comprehensive kit comprises a debugger, libraries, a handset emulator using QEMU (Quick Emulator), comprehensive documentation, sample code, and tutorials.\\
+
+    \item[4.] iOS \cite{wukkadada2015mobile}
+    \item[]iOS, as the exclusive operating system developed by Apple for its suite of mobile devices, including the iPhone, iPad, and iPod Touch, is renowned for its developer-friendly environment and end-user experience. From a development perspective, the iOS ecosystem offers a robust framework, utilizing languages like Swift and Objective-C within the iOS Software Development Kit (SDK) to create innovative applications.\\
+    The closed ecosystem of iOS ensures a more controlled environment for developers, with stringent app submission guidelines and a comprehensive review process, contributing to a high standard of app quality and security within the App Store. The integration of hardware and software is seamless, enabling developers to leverage the full potential of Apple devices and services like Apple Watch, iCloud, and Mac computers, thus providing a unified experience across the Apple ecosystem.\\
+    Regular updates to the iOS platform not only introduce new features and enhancements but also address security concerns and bugs, ensuring a stable and secure environment for both developers and end-users. The platform's optimization with the hardware allows developers to create apps that run smoothly and efficiently, enhancing performance and battery life.\\
+    Additionally, the incorporation of Siri, Apple's virtual assistant, allows developers to integrate voice commands and other functionalities into their applications, offering a more interactive user experience. The commitment to user privacy and data security through features such as Touch ID and Face ID underscores the priority Apple places on safeguarding user information.\\
+    Overall, the iOS environment provides developers with a combination of reliable tools, a secure and controlled ecosystem, and a high-quality user experience, contributing to its appeal among both developers and end-users.\\
+    \end{enumerate}
+
+  \item[b.]Tools and Language
+
+    \begin{enumerate}
+        \item[1.]Java
+        \item[]Java is an object-oriented programming language developed by James Gosling of Sun Microsystems and other researchers. It is one of the most commonly used languages in the web application field and is also widely used in software development for mobile devices including Android. Millions of Java applications are in use today as a result of their popularity among developers for over 20 years. It's a fast, secure and reliable programming language for coding everything from mobile apps and enterprise software to big data applications and server-side technologies. In addition, it is a very suitable language for game development, database processing, big data, and distributed processing. Our team will develop an application, so we will build a backend server using Java.\\
+
+        \item[2.]Spring Boot 
+        \item[]The Java Spring Framework is a popular enterprise-class open-source framework for creating production-class standalone applications running on Java Virtual Machine (JVM). Java Spring Boot is a tool that helps you develop web applications and microservices faster and more easily using the Spring Framework through three core functions. Automatic configuration, a self-righteous approach to configuration, and the ability to create standalone applications. These features work together to provide tools to help you set up Spring-based applications with minimal configuration and settings. Because of these advantages, our team decided to use the Spring Boot framework to build backend servers in this project.\\ \\
+
+        \item[3.]Hibernate \cite{fisher2010spring}
+        \item[]Hibernate is an ORM framework intended to translate between relational databases and the realm of object-oriented development. Hibernate provides a querying interface, using Hibernate Query Language (HQL) or the Hibernate Criteria API. Using hibernate increases productivity because queries can be performed only by method calls without using SQL directly, and it is also excellent in terms of maintenance because it performs the parameters, results, etc. of the DAO related to the table when the table column is changed.Together, Spring and Hibernate are a dynamic duo, capable of simplifying dependency collaboration, reducing coupling, and providing abstractions over persistence operations. Since our team decided to use spring boot for the backend server, we decided to use hibernate, which is well matched with spring boot, to build the database.\\
+
+        \item[4.]Jupyter Notebook \cite{jupyterNotebook}
+        \item[]Jupyter Notebook is the most widely-used system for interactive literate programming. It was designed to make data analysis easier to document, share, and reproduce. Jupyter originated from IPython and, in addition to Python, it supports a variety of programming languages, such as Julia, R, JavaScript, and C. It also allows the interleaving of not only code and text, but also different kinds of rich media, including image, video, and even interactive widgets combining HTML and JavaScript.\\
+
+        \item[5.]Google Colaboratory \cite{8485684}
+        \item[]Google Colaboratory (also known as Colab) is a cloud service based on Jupyter Notebooks for disseminating machine learning education and research. It provides a runtime fully configured for deep learning and free-of-charge access to a robust GPU. Thus, it can be effectively exploited to accelerate not only deep learning but also other classes of GPU-centric applications.\\
+
+        \item[6.]TensorFlow \cite{Tensorflow}
+        \item[]TensorFlow is a machine learning system that operates at large scale and in heterogeneous environments. Its computational model is based on dataflow graphs with mutable state. Graph nodes may be mapped to different machines in a cluster, and within each machine to CPUs, GPUs, and other devices. TensorFlow supports a variety of applications, but it particularly targets training and inference with deep neural networks. It serves as a platform for research and for deploying machine learning systems across many areas. \\
+
+        \item[7.]PyTorch
+        \item[]PyTorch is a machine learning library that shows that these two goals are in fact compatible: it was designed from first principles to support an imperative and Pythonic programming style that supports code as a model, makes debugging easy and is consistent with other popular scientific computing libraries, while remaining efficient and supporting hardware accelerators such as GPUs. Our goal with PyTorch is to build a flexible framework to express deep learning algorithms. \\
+
+        \item[8.]Docker
+        \item[]Docker was designed in order to simplify the creation, deployment and execution of applications using containers. Containerization allows the user to run applications in a virtual environment by packaging all necessary elements such as files, libraries and other essential components together. Furthermore, containers play a vital role in DevOps processes as an integral part of automated software builds or as part of continuous deployment. \\
+
+        \item[9.]Git \cite{velog-git}
+        \item[]Git serves as an effective tool for managing versions, facilitating the seamless integration of changes and updates. However, prior to delving into Git, it's important to grasp the concept of a 'version control system.' Essentially, a version control system captures and monitors modifications made to a file, enabling easy retrieval of any previous iteration when needed. While working on a document, multiple revisions take place, progressing from the initial draft to the ultimate version. Often, files are renamed as 'final,' 'final copy,' 'finalized,' and so on, leading to the replacement of previous versions. This practice can complicate the process of reverting to a specific point in time to understand the alterations made. However, a version control system resolves this challenge. It enables the management of numerous iterations of the same data, facilitating the tracking of changes over time and attributing them to specific contributors. This simplifies the process of reverting to previous or original versions and promptly identifying the responsible individuals for any issues that may arise.\\
+
+        \item[10.]JavaScript \cite{jensen2009type}
+        \item[]JavaScript is the main scripting language for Web browsers, and it is essential to modern Web applications. We present a static program analysis infrastructure that can infer detailed information for JavaScript programs using abstract interpretation. The analysis is designed to support the full language as defined in the ECMAScript standard, including its peculiar object model and all built-in functions. The analysis results can be used to detect common programming errors – or rather, prove their absence, and for producing type information for program comprehension.\\
+
+        \item[11.]React Native \cite{waren2016cross}
+        \item[]React Native is an open source JavaScript framework for building mobile applications for both iOS and Android devices. It was open-sourced on March 2015 by Facebook, and it's based on the React framework published a few years earlier. \\
+        
+        \item[12.]Python
+        \item[]Python is a high-level, versatile programming language known for its readability and simplicity, making it an excellent choice for beginners and professionals alike. It supports multiple programming paradigms and offers a vast array of libraries and frameworks, enabling developers to create diverse applications, from web development and data analysis to artificial intelligence and scientific computing. Its clear and concise syntax promotes easy comprehension, fostering rapid development and fostering a robust community that contributes to its continuous evolution and widespread adoption.\\
+
+        \item[13.]Bert \cite{affi2021blc}
+        \item[]The full name of BERT is Bidirectional Encoder Representations from Transformers, which is a language model representation based on self-attention blocks. The main innovation of the model is the pre-training method, which is trained with Masked LM and next sentence prediction to capture the word and sentence level representation respectively. BERT is pre-trained in different language model tasks using existing unmarked corpora. The pre-trained deep bidirectional model with one output layer can reach state-of-the-art performance in many tasks such as question answering and multi-genre natural language inference. The idea is to have a common architecture that fits many tasks and a pre-trained model that reduces the need for labeled data. for a given token, its vector representation is built by summing the corresponding, word, sub-word and position embeddings. These combinations of preprocessing steps make BERT so versatile. \\
+
+        \item[14.]ELMo \cite{devlin2018bert}
+        \item[]ELMo is a deep contextualized word representation that models both complex characteristics of word use (e.g., syntax and semantics) and how these uses vary across linguistic contexts (in order to model polysemy). ELMO extends a standard word embedding model with features produced bidirectionally with character convolutions. The writers in [16] showed that different layers in this deep recurrent model learn different aspects of a given token. Each token converts to a relevant representation using character embeddings. This character embedding representation is then run through a convolutional layer, followed by a max-pool layer. Finally, this representation is passed through a 2-layer highway network [30] before being provided as the input to the LSTM layer. These transformations to the input token allow the model to pick up on character-level features which are helpful for morphologically rich languages such that word-level embeddings could miss and deal with the OOV problem for various NLP tasks. By adding ELMO word embeddings to our model, the model will be able to infer representations for previously unseen words and obtain syntactic information at the morpheme level. \\
+        
+    \end{enumerate}
+\end{enumerate}
+
+\subsection{Software in use}
+\begin{enumerate}
+
+    \item[1.]IntelliJ \cite{intellij2011most}
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=.65\columnwidth]{fig/IntelliJ.png}
+    \label{fig:IntelliJ}
+    \caption{IntelliJ} 
+    \end{figure} 
+    \item[]IntelliJ IDEA, JetBrains’ flagship Java IDE, provides high-class support and productivity boosts for enterprise, mobile and web development in Java, Scala and Groovy, with all the latest technologies and frameworks supported out of the box. Every aspect of IntelliJ IDEA is specifically designed to maximize developer productivity. Together, powerful static code analysis and ergonomic design make development a productive and enjoyable experience. Intellij has powerful recommendations, multiple refactoring and debugging capabilities, and supports quick updates tailored to Java and spring boot versions, so we decided to use Intellij to develop backend servers.\\
+    \clearpage
+
+    \item[2.]Postman \cite{hyams2022you}
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=.6\columnwidth]{fig/Postman.jpeg}
+    \label{fig:Postman}
+    \caption{Postman} 
+    \end{figure}
+    \item[]Postman is a downloadable client and web application that was created as a tool to help with the API testing process. It is now a robust platform for API development, with features to support both the building and use of APIs. Postman has tools for documentation, collaboration with teammates or the larger community, and makes it easy to iterate projects and share them. Postman is a helpful interface that lets you view, send, interact with and use API requests. You can easily see if your request worked and what response was returned. Our team will use postman to express Rest API and resolve any inconveniences that may arise when collaborating between the backend and the frontend.\\ 
+
+    \item[3.]Visual Studio Code
+    \begin{figure}[h]
+    \centering
+    \textbf{}    
+    \includegraphics[width=.6\columnwidth]{fig/vscode.png}
+    \label{fig:Visual Studio Code}
+    \caption{Visual Studio Code} 
+    \end{figure}
+    \item[]Visual Studio Code (VSCode) is a lightweight, open-source code editor developed by Microsoft, designed for various platforms and primarily used for software development. It supports a wide array of programming languages, providing syntax highlighting, auto-completion, debugging, and language-specific features. Its key strengths include extensibility, allowing users to customize their development environment with numerous extensions. VSCode offers integrated development environment (IDE) features such as code editing, debugging, version control, terminal access, and embedded Git control. It boasts a lightweight installation size, fast startup times, and is supported across Windows, macOS, and Linux operating systems. With a large user community and online support, it fosters collaboration and assistance among users. It is commonly used in web development, application development, data science, and various tech stacks.\\
+
+    \item[4.]Expo
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=.5\columnwidth]{fig/Expo.png}
+    \label{fig:Expo}
+    \caption{Expo} 
+    \end{figure}
+    \item[]Expo is a tool chain built around React Native that streamlines the creation and distribution of cross-platform software. In addition to a managed build environment, and tools for testing and debugging, Expo offers a variety of tools and services that may be used to develop, build, and publish React Native applications. The ability to build features and functionality into their applications makes it simpler for developers to create apps that can work on both Android and iOS.\\ 
+
+    \item[5.]Figma \cite{staiano2022designing}
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=.5\columnwidth]{fig/Figma.png}
+    \label{fig:Figma}
+    \caption{Figma} 
+    \end{figure}
+    \item[]Figma has succeeded in bringing together a whole suite of design tools to provide an all-in-one solution. Figma covers just about everything you need to create a complex interface, from brainstorming and wireframing to prototyping and sharing assets. In addition to this, Figma goes beyond the design side of building a product and generates CSS, IOS, and Android code for developers to use.\\
+
+    \item[6.]Node.js \cite{tilkov2010node}
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=.49\columnwidth]{fig/Node.js.png}
+    \label{fig:Node.js}
+    \caption{Node.js} 
+    \end{figure}
+    \item[]One of the more interesting developments recently gaining popularity in the server-side JavaScript space is Node.js. It's a framework for developing high-performance, concurrent programs that don't rely on the mainstream multithreading approach but use asynchronous I/O with an event-driven programming model.\\
+    
+    \item[7.]GitHub
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=.5\columnwidth]{fig/GitHub-logo.png}
+    \label{fig:GitHub}
+    \caption{GitHub} 
+    \end{figure}
+    \item[]GitHub acts as a platform supporting projects utilizing Git, functioning as a remote command center for Git operations. It provides a hub for version control and developer collaboration, operating as a cloud-based version control system. Git and GitHub are commonly used interchangeably for modern software development collaborations, yet GitHub's functionalities extend beyond this scope. To begin, GitHub is the preferred choice for open-source software, granting access to diverse tool source codes used within our team. Moreover, GitHub serves as a repository for identifying issues or bugs in open libraries. Additionally, it boasts various collaborative features: Pull requests enable thorough reviews of work in different Git branches before merging, and GitHub actions streamline the implementation of continuous integration and continuous deployment (CI/CD). Within our team, we employ GitHub actions to monitor team progress and aid in collectively addressing and resolving errors.\\ 
+
+    \item[8.]Notion 
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=.5\columnwidth]{fig/notion_logo.png}
+    \label{fig:Notion}
+    \caption{Notion} 
+    \end{figure}
+    \item[]Notion is a Software as a Service (SaaS) application accessed via the web, operating as a wiki platform. A key benefit is its capability to generate articles in MD file format and provide live updates. With recent enhancements, it has evolved into an invaluable resource for overseeing project details and effectively handling meeting minutes. \\ \\ \\ \\ \\
+
+    \item[9.]Overleaf \\
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=.5\columnwidth]{fig/overLeaf.png}
+    \label{fig:OverLeaf}
+    \caption{OverLeaf} 
+    \end{figure}
+    \item[]Overleaf serves as an online tool supporting cooperative composition and editing of LaTeX documents. It boasts an intuitive interface specifically designed for the creation of scientific and technical materials like research papers, reports, and theses. Through Overleaf, several team members can work together on a document concurrently, ensuring smooth collaboration and effective monitoring of modifications. Moreover, it integrates pre-installed functionalities for handling references, equations, tables, and graphics, making it a favored option among scholars and researchers. The content of this document was produced using Overleaf's IEEE template.\\
+
+    \item[10.]Google Drive \cite{gallaway2013google}
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=.65\columnwidth]{fig/Google drive.png}
+    \label{fig:Google Drive}
+    \caption{Google Drive} 
+    \end{figure}
+    \item[]Google Drive provides two distinct functions. Similar to its forerunner Google Docs, Drive offers online office applications alongside cloud storage, featuring sharing and collaboration capabilities. The recent addition to the platform is a file storage system that synchronizes with a local folder installed by the user, allowing storage and access of various file types through a Google account. The authors analyze the primary functions of Google Drive and evaluate it in comparison to competitors. Furthermore, they explore Google Drive's usefulness for library staff and its role as a collaborative tool supporting students' academic endeavors and education. Our team utilized Google Drive for weekly meetings to monitor the progress of our team members.\\ \\ \\ \\ \\ \\ \\ \\
+
+    \item[11.]ChatGPT
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=.5\columnwidth]{fig/chatGPT.png}
+    \label{fig:ChatGPT}
+    \caption{ChatGPT} 
+    \end{figure}
+    \item[]ChatGPT is an AI-driven application that facilitates immediate interactions with an AI. While GPT-3.5 was trained on data until 2021, GPT-4 has been trained on more current information. ChatGPT has transformed generative AI, providing improved functionalities for activities like creating reports, summarizing articles, addressing problems, and even assisting with coding tasks.\\ 
+   
+    \item[12.]Zoom \cite{kohnke2022facilitating}
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=.4\columnwidth]{fig/Zoom.png}
+    \label{fig:Zoom}
+    \caption{Zoom} 
+    \end{figure}
+    \item[]Zoom, a versatile software platform, serves as a hub for video conferencing, virtual gatherings, and interactive webinars. Through its interface, users can engage in live video and audio communication, fostering seamless online interactions and discussions. It finds widespread application across various domains, encompassing corporate discussions, distance learning, and personal interactions. The platform accommodates extensive virtual gatherings, allowing numerous participants to engage in video calls, utilize chat functions, share screens, and more, ensuring prompt real-time interactions and collaborative efforts. Users can access Zoom through the dedicated app installed on their devices or by using web browsers, providing accessibility across various platforms. Throughout the COVID-19 pandemic, Zoom garnered immense traction due to the surge in remote learning and telecommuting. Nevertheless, its utility extends beyond these realms, serving diverse needs such as professional meetings and everyday communication. Our team opted for Zoom to conduct weekly gatherings.\\ \\ \\ \\ \\
+\end{enumerate}
+
+\subsection{Cost Estimation}
+In the creation of HISKIN, we make effective use of a wide array of cost-efficient software solutions that are readily available for free. This approach allows us to keep development costs to a minimum.\\ 
+
+\subsection{Task Distribution}
+
+\begin{table}[h]
+\centering
+\caption{Team Members and Their Tasks}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{| p{3cm}|p{3cm}|}
+
+\hline
+Tasks & Name \\
+
+\hline
+Frontend Developer & HAE RYUNG CHA\\
+
+\hline
+Backend Developer & SEOK YOUNG KIM\\
+
+\hline
+UI-UX Designer & HAE RYUNG CHA\\
+
+\hline
+AI Developer & Yu Jin Park\\
+
+\hline
+Product Designer & Chan Min Kim\\ \\
+
+\hline
+\end{tabular}
+\end{table}
+
+\section{Specifications}
+
+\subsection{Start Page}
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=.9\columnwidth]{fig/start page.png}
+    \label{fig:Start Page}
+    \caption{Start Page} 
+    \end{figure}
+When user download the HISKIN app and open it for the first time, user will encounter three sequential screens. In the middle of each screen, a clean image is displayed, accompanied by a brief description of the app below it. On the first two screens, users can either click the 'Get Started' button at the bottom of the screen or swipe the screen to the left to proceed to the next page. Upon reaching the final page, pressing the 'Get Started' button with a red border at the bottom instantly transitions the user to the login screen.\\ 
+
+\clearpage
+\subsection{Log In}
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=.8\columnwidth]{fig/로그인.png}
+    \label{fig:Log In Page}
+    \caption{Log In Page} 
+    \end{figure}
+This particular page serves as the platform for all actions associated with user login. Within this interface, users are able to log in using their unique ID and password. Positioned at the screen's top section, there exists a designated area where users can input their email and password. When the user clicks on that area to enter their email and password, the keyboard will slide up, covering the area below the login button. It is essential that the email is entered in the correct format, while the password can contain up to 16 characters. If the user clicks on the 'eye' icon located to the right of the password input field, they can view the password they have entered. The user can click the 'Save ID' button to save their ID and password. Additionally, the user can click on the 'Find ID/Password' button to retrieve their ID or password.\\  Upon accurately entering both the email and password, users can proceed by clicking the login button situated below the password field. Activating this button triggers the transmission of the information in the email and password fields to the backend. The backend then verifies the user's details in the database to ascertain if there's a match and responds accordingly, signaling the success or failure of the login attempt.\\  A successful login action redirects the screen to the main page. In the case of a login failure, an error message indicating 'Invalid email or password' is displayed. Additionally, for users without an account, there's an option to create one for login purposes by clicking the 'Sign-Up' button located at the bottom of the screen. \\ \\
+
+\subsection{Sign Up} \\ \\
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=.45\columnwidth]{fig/회원가입.png}
+    \label{fig:Sign Up Page}
+    \caption{Sign Up Page} 
+    \end{figure}
+Users who do not have an account can create one by selecting the 'Sign Up' button.
+\begin{itemize}
+    \item NAME (Up to 20 Characters)
+    \item Nickname (Up to 12 Characters)
+    \item Gender (Select Male or Female)
+    \item ID/Email (Correct Email Format)
+    \item Password (Up to 16 Characters)
+\end{itemize}
+When creating a new account, users can freely click on the 'Log in' button to navigate to the login page. \\
+Successful Sign Up: Upon receiving new information that does not duplicate an existing email as an input value, a notification window will display with the message 'You have successfully signed up,' confirming the successful registration. Once the user successfully signs up as a member, they can return to the login screen using the provided button and log in using the information entered during the sign up process.\\
+
+\clearpage
+\subsection{Device Registration}
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=.99\columnwidth]{fig/디바이스 등록.JPG}
+    \label{fig:Device Registration Page}
+    \caption{Device Registration Page} 
+    \end{figure}
+The user can register their owned beauty device on the device registration page. Registration is possible if the device and the application are connected to the same Wi-Fi network. An image appears in the middle of the initial screen, accompanied by a message below it: "Please keep your smartphone close to the device."\\
+When the user brings the smartphone near the device, the device registration process initiates, and the screen displays 'loading' during registration. Upon completion of the registration, the message 'registration complete' appears at the bottom of the screen, and after a moment, it automatically transitions to the 'My Device' screen.\\
+On the 'My Device' screen, details about the device registered by the user are shown, and users can return to the home screen by tapping the 'Complete' button located at the screen's bottom.\\
+    
+\subsection{Skin Type Diagnosis}
+Skin type diagnosis is a function that diagnoses skin types by selecting answers to skin-related questions and analyzing them. The questions and answers consist of questions selected according to Asian skin characteristics based on the skin type classification method of American dermatologist Leslie Bowman. Questions are largely classified into four categories and each question has two sub-questions. Score according to the user's answer to obtain the sum of the scores of the answers to the two sub-question and give one of the two skin types according to the score. The first question is about dryness and oiliness, and 'D' is given for dryness and 'O' for oiliness. The second question is about sensitivity and resistance, which gives 'S' for sensitivity and 'R' for resistance. The third question is about pigmentation, which gives 'P' for pigmentation and 'N' for non-pigmentation. The fourth question is about wrinkles and tightness, which gives wrinkled skin 'W' and tight skin 'T'. The user would be diagnosed with the final skin type by combining the four diagnosed skin types. It diagnoses one of a total of 16 skin types, and information on this is stored in user information, and depending on this skin type, customized skin care solutions such as cosmetics recommendations, challenges, and skin care routine recommendations can be provided. \\
+\begin{itemize}
+    \item[a.]Questions and Answers
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=.45\columnwidth]{fig/HISKIN-14.jpg}
+    \label{fig:Questions and Answers}
+    \caption{Questions and Answers Page} 
+    \end{figure}
+    \item[]When the user accesses the skin type diagnostic screen, the HISKIN character appears at the top, creating a friendly interface. A question for skin type diagnosis is presented below the character, providing a personalized interaction as if the character is directly asking a question. Beneath the question, multiple choices are offered for the user to select the most suitable option for their skin type. Clicking on each answer turns the button a light red color. To proceed to the next question, the user can press the 'Next' button at the bottom of the screen. Users receive points corresponding to their selections: 1 point for choice 1, 2 points for choice 2, 3 points for choice 3, 4 points for choice 4, and 2.5 points for choice 5. By aggregating the scores from answers to two sub-questions, the application diagnoses one of the two skin types available based on the user's responses. \\ 
+    \clearpage
+    \item[b.]Skin Type Results
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=.45\columnwidth]{fig/HISKIN-16.jpg}
+    \label{fig:Skin Type Results Page}
+    \caption{Skin Type Results Page} 
+    \end{figure}
+    \item[]The user will be diagnosed with their skin type by selecting the last 4-2 question and pressing the 'Next' button. The HISKIN character comes out and guides the user to the skin type and the characteristics of the skin type. The overall features of the skin type are located just below the character. Below that, it guides you on the specific characteristics of the skin type and the characteristics of cosmetics that fit you well. Press the 'Done' button located at the bottom of the screen to move the user back to the main page. Skin types are automatically stored in your information, allowing you to receive customized skin care solutions. \\ 
+\end{itemize}
+
+\subsection{Cosmetic Recommendations}
+Cosmetics Recommendations is a function that allows application to recommend cosmetics that fit the user's skin type. The application recommends cosmetics suitable for users based on the results of skin type diagnosis. It uses Selenium, a crawling library written in Java on a backend server, to provide cosmetics information obtained from the 'OLIVE YOUNG' site. The best ingredients for each of the 16 skin types are stored in the database, and cosmetics containing good ingredients for each type are searched on the "Olive Young" site to recommend the most popular products. Users will be able to get recommendations for cosmetics that are most optimized for their skin, thereby forming a skincare routine. \\ \\ \\
+\begin{itemize}
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=.45\columnwidth]{fig/HISKIN-20.jpg}
+    \label{fig:Cosmetic Recommendations Page}
+    \caption{Cosmetic Recommendations Page} 
+    \end{figure}
+    \item[]The picture above is a screen that users see when they enter the cosmetics recommendation screen. The user's nickname and skin type are located at the top of the screen and provide brief information about the skin type immediately below. In the middle of the screen, there is a picture of the cosmetics recommended on the Olive Young site, and below it, it tells you the characteristics of the cosmetics that match your skin type and the name of the recommended cosmetics. The 'Done' button is located at the bottom of the screen and this button is pressed to return to the main page.
+\end{itemize}
+
+\subsection{AI Communication}
+The natural language processing AI model created to continue natural daily conversations with users consists of the following.
+\begin{itemize}
+    \item[a.]Data-sets:
+    \item[]The first data used in this model are Korean public corpus, which are Korean Wikipedia, KorQuAD learning/debtset, and Naver movie corpus learning/testset. Pre-processing of this data is necessary to create learning data. To this end, data is preprocessed using morpheme analyzers called KoNLPy, Khaiiii, soynlp, and sentencepiece, which are open-source packages.
+    \item[b.]Methodology:
+    \item[]Based on the preprocessed data, a sentence-level embedding model will be learned. The embedding models used here are ELMo and BERT. ELMo is a language model that expresses in probability how natural the word sequence is. ELMo is learned in the process of matching which words will come after the input word sequence. BERT basically uses Self-Attention. BERT masks 15 percent of words when training data enters the input. And it's the way the neural network predicts those hidden words.
+    \item[c.]Evaluation:
+    \item[]Fine tuning is performed to evaluate the embedding results. The previously used data is input and the task of classifying positive/negative polarity is performed. Here, the F1 score will be selected as a major evaluation index to check the performance of the model.
+\end{itemize}
+
+\subsection{Skin Care}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\columnwidth]{fig/스킨 케어.png}
+    \label{fig:Skin Care Page}
+    \caption{Skin Care Page} 
+    \end{figure}
+This page provides a voice guide that makes a user feel like the user is getting care from a dermatologist when the user takes care of your skin. If the user clicks the care button in the middle of the navigation bar, the user will be taken to the care main screen. When the user selects a device to proceed with care on the main screen, the user will be directed to the care guide page for the selected device. On the care guide page, the speaker continues daily conversations with the user, such as weather and concerns, or recommends cosmetics that fit the user well, during the management time.\\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\
+
+\subsection{Skin Care Challenge} 
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=.45\columnwidth]{fig/HISKIN-21.jpg}
+    \label{fig:Skin Care Challenge Page}
+    \caption{Skin Care Challenge Page} 
+    \end{figure}
+    When a user accesses the challenge page, they will see seven skincare challenges displayed on the screen. These challenges encompass cleansing, meeting a water intake quota, applying sunscreen, consuming skin-friendly foods, self-assessing skin conditions, managing stress, and acknowledging beauty tips provided by HISKIN.\\
+    The user can select a challenge they have completed, and upon selection, the respective button turns red. One point is awarded for each selected challenge, contributing to the total score displayed at the top of the screen. The total score ranges from zero to a maximum of seven.\\
+    Users can adjust their chosen challenges until midnight the following day. The final challenge score is recorded at midnight and stored in the user database. These scores are utilized for the current week’s skincare assessment and for the past six months’ skincare history, accessible on the 'My Page' section. \\
+    \clearpage
+
+\subsection{Community}
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=.8\columnwidth]{fig/커뮤니티.png}
+    \label{fig:Community Page}
+    \caption{Community Page} 
+    \end{figure}
+HISKIN has a community menu included in the bottom tab. The user can check the entire article by entering the community menu. The article guides useful information such as how to use the device and secret to skin care, and when you click on the article, the information comes up at the bottom of the app. Click the 'To List' button to return to the community screen. When the user presses the heart button next to the article, the article is saved as 'attention article' and can be collected separately. 
+
+
+\subsection{My Page}
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=.41\columnwidth]{fig/내정보 1.png}
+    \label{fig:My Page 1}
+    \caption{My Page 1} 
+    \end{figure}
+When the user enters the My Page screen, they can access comprehensive information about their skin. The HISKIN character appears at the top of the screen, and right below the character, the user's diagnosed skin type from the skin type diagnosis is displayed. Beneath the skin type, there's a 'Do the test again' button in smaller font than the skin type. Clicking this button redirects the user to the skin type diagnosis screen for a reevaluation of their skin type. The newly diagnosed skin type is then updated in the user database and reflected on the My Page screen.\\
+Below the 'Do the Test Again' button, there's a linear graph illustrating this week's skin score. The 'This Week's Skin Score Graph' visualizes the skin challenge scores of the last seven days to provide a visual representation of the user's skincare efforts over the week.\\
+Further down, under the "Skin Score Graph of the Week," there are 'shortcut' buttons that allow users to check their skin score for the current month and the last six months. "My skin score this month?" is written in bold letters, with a small note below it stating, "Track my skin for a short period." A 'shortcut' button is placed alongside these labels, leading to a page providing information about the user's skin for the current month.\\
+Just below, there's a "What about your skin over the last 6 months?" section with a corresponding 'shortcut' button. "What about your skin for the last 6 months?" is written in bold letters, and a small note below mentions, "Chasing my skin score for an extended period." Another 'shortcut' button is available next to these labels.\\
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.43\columnwidth]{fig/내정보 2.png}
+    \label{fig:My Page 2}
+    \caption{My Page 2} 
+    \end{figure}
+On the 'What's Your Skin This Month?' page, a linear graph displays the skin care challenge scores on the 1st, 5th, 10th, 15th, 20th, 25th, and 30th of the month. Beneath the graph, a concise summary of the month's skincare routine is presented in bold, followed by a section offering feedback on areas that may need improvement in lighter text.\\
+To navigate back to My Page, users can click on the arrow-shaped Return button positioned at the top left corner of the screen.\\
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.43\columnwidth]{fig/내 정보3.png}
+    \label{fig:My Page 3}
+    \caption{My Page 3} 
+    \end{figure}
+On the 'What's Your Skin in the Last 6 Months?' page, users access information concerning their skin over the past six months. The page averages the skin care challenge scores monthly and plots them over a six-month period in a graph. Following the graph, a summarized review of the six-month skincare routine is displayed in bold, with additional feedback or commendations in lighter text.\\
+To navigate back to My Page, users can click on the arrow-shaped Return button positioned at the top left corner of the screen.\\
+\bibliographystyle{IEEEtran} 
+\bibliography{references}
+
+\end{document}
